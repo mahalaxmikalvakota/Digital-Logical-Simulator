@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Logic Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="simulator.html">Simulator</a>
+        <a href="learn.html">Learn</a>
+        <a href="kmap.html">K-Map</a>
+        <a href="about.html">About</a>
+    </div>
+    <div class="container">
+
+        <h1>⚡ Digital Logic Simulator</h1>
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <h2>Truth Table</h2>
+
+            <table>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>Out</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td><input id="o0"></td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td><input id="o1"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td><input id="o2"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td><input id="o3"></td>
+                </tr>
+            </table>
+
+            <button onclick="generate()">Generate</button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <h2>Expression</h2>
+            <p id="expression">---</p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <h2>Simulation</h2>
+            A <input type="checkbox" id="A">
+            B <input type="checkbox" id="B">
+
+            <button onclick="simulate()">Run</button>
+
+            <p id="output">Output: -</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+
+    <!-- K-MAP -->
+    <div class="card">
+        <h2>K-Map</h2>
+        <div id="kmap"></div>
+    </div>
+
+    <!-- CIRCUIT -->
+    <div class="card">
+        <h2>Circuit Diagram</h2>
+        <svg id="circuit" width="400" height="200"></svg>
+    </div>
+</body>
+
+</html>
